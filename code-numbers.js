@@ -1,4 +1,4 @@
-function main() {
+function numbers() {
   const numbers = [
     0,
     -0,
@@ -15,4 +15,4 @@ function main() {
   console.log('numbers', numbers);
 }
 
-exampleFormatter(main);
+exampleFormatter(numbers);
