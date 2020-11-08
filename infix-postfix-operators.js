@@ -1,11 +1,28 @@
-function main() {
+function postfix() {
   let x = 5;
-  let a = x++;
-  let b = ++x;
-  let c = +x++;
-  let d = ++x + x++;
-  let e = x++ + ++x;
-  console.log({ a, b, c, d, e, x });
+  const result = x++;
+  console.log({ result, x });
 }
 
-exampleFormatter(main);
+function infix() {
+  let x = 5;
+  const result = ++x;
+  console.log({ result, x });
+}
+
+function infixAndPostfix() {
+  let x = 5;
+  const result = ++x + x++;
+  console.log({ result, x });
+}
+
+function postfixAndInfix() {
+  let x = 5;
+  const result = ++x + x++;
+  console.log({ result, x });
+}
+
+exampleFormatter(postfix);
+exampleFormatter(infix);
+exampleFormatter(infixAndPostfix);
+exampleFormatter(postfixAndInfix);
