@@ -1,18 +1,18 @@
-function Calculator() {
-  this.read = function() {
-    this.a = Number(prompt('A:'))
-    this.b = Number(prompt('B:'))
+exampleFormatter(function calculatorExample() {
+  function Calculator() {
+    this.read = function () {
+      this.a = 15;
+      this.b = 10;
+    };
+
+    this.sum = () => this.a + this.b;
+
+    this.mul = () => this.a * this.b;
   }
 
-  this.sum = () => this.a + this.b
+  let calculator = new Calculator();
+  calculator.read();
 
-  this.mul = () => this.a * this.b
-}
-
-let calculator = new Calculator();
-calculator.read();
-
-exampleFormatter(function calculatorExample() {
-  console.log( "Sum=" + calculator.sum() );
-  console.log( "Mul=" + calculator.mul() );
+  console.log('Sum=' + calculator.sum());
+  console.log('Mul=' + calculator.mul());
 });
